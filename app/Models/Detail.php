@@ -12,6 +12,7 @@ class Detail extends Model
 {
     use HasFactory;
     protected $casts = [
+        'images' => 'array',
         'prices' => 'array',
     ];
 
@@ -34,6 +35,17 @@ class Detail extends Model
     public function getPricesAttribute($value)
     {
         return json_decode($value);
+    }
+
+    public function setImagesAttribute($value)
+    {
+        if (is_string($value)) {
+            $value = json_decode($value);
+        }
+        if (empty($value)) {
+            $value = array();
+        }
+        $this->attributes['images'] = json_encode($value);
     }
 
     public function getImagesAttribute($value)
