@@ -27,6 +27,7 @@ class Blog extends Model
                         ->where('posts.status', '=', 1);
                 })->get();
         }
+
         return Tag::join('tag_posts', 'tags.id', '=', 'tag_posts.tag_id')
             ->whereIn('tag_posts.post_id', function ($query) {
                 $query->select('posts.id')->from('posts')
