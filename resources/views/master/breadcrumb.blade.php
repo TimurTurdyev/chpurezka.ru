@@ -8,7 +8,7 @@
                     <h1>{{$h1}}</h1>
                     <ul class="breadcrumb-links">
                         <li>
-                            <a href="{{url('/')}}">Главная</a>
+                            <a href="{{route('home.index')}}">Главная</a>
                         </li>
                         @foreach($breadcrumbs as $breadcrumb)
                             <li class="active">
