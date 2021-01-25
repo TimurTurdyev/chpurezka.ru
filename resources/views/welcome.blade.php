@@ -59,7 +59,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg p-0">
                     <a class="navbar-brand" title="{{setting('site.title')}}" href="{{url('/')}}">
-                        <img src="{{setting('site.logo') ?? 'theme/img/bg/logo_black.png'}}" alt="{{setting('site.title')}}"
+                        <img src="{{setting('site.logo')}}" alt="{{setting('site.title')}}"
                              class="img-fluid">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fixedNavbar"
